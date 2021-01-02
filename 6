@@ -1,0 +1,29 @@
+#问答题
+##1.什么是 iframe?
+iframe 也是html的一个标签，不过不是往页面上添加一个元素那么简单，iframe 会创建包含另外一个文档的内联框架
+
+##2.如何在当前页面中嵌入其他页面？
+可以使用iframe标签，在iframe标签的src属性中写入要插入的页面的URL就可以
+
+##3.iframe 有哪些常见应用？
+* 插入广告
+* 实现简单的局部刷新
+
+##4.如何使用 <a> 标签控制 iframe 中显示的内容？
+可以在a标签中设置target属性的属性值和iframe标签的name属性一样的值，就可以通过点击a标签的文字，就可一控制iframe标签内的内容了
+
+##5.为什么越来越少的人使用 iframe？
+iframe的创建比其它包括scripts和css的 DOM 元素的创建慢了 1-2 个数量级
+Iframes 阻塞页面加载，window 的 onload 事件需要在所有 iframe 加载完毕后(包含里面的元素)才会触发，当 onload 事件加载延迟后，它给用户的感觉就是这个网页非常慢。
+
+##6.frame 和 iframe 有什么区别？
+* frame不能脱离frameSet单独使用，iframe可以。
+* frame不能放在body中,否则不能正常显示。
+* frame的高度只能通过frameSet控制；iframe可以自己控制，不能通过frameSet控制。
+* 浏览器兼容性问题：
+    HTML 4.1 Strict DTD 和 XHTML 1.0 Strict DTD 中，不支持 iframe 元素。
+    HTML5 不支持 <frame> 标签，HTML 4.01 支持 <frame> 标签。
+
+#代码题
+##1.请实现一个类似 gitbook 的左边点击右边局部刷新的效果
+[作业链接]()
