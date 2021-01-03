@@ -4,16 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>码蜂社前端作业6</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        *{
+            box-sizing: border-box;
+        }
+.left{
+    float:left;
+    width: 100px;
+}
+.left a{
+    display: block;
+}
+.rigth{
+    float: left;
+    width: calc(100%-102px);
+    height: 100vh;
+}
+    </style>
 </head>
 <body>
-    <span>
+    <div class="left">
         <a href="http://www.baidu.com" target="iframe1">百度</a>
         <a href="http://www.sina.com.cn" target="iframe1">新浪</a>
         <a href="http://www.mafengshe.com" target="iframe1">码蜂社</a>
         
-    </span>
-    <div>
-        <iframe name="iframe1" src="http://www.baidu.com" frameborder="0" width="1500px" height="700px"></iframe>
     </div>
+    
+        <iframe name="iframe1" src="http://www.baidu.com" frameborder="0" width="1500px" height="700px" class="right"></iframe>
+    
 </body>
 </html>
