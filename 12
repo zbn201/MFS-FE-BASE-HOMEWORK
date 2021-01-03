@@ -1,0 +1,73 @@
+#问答题
+##1.有哪几种选择器？请举出每种选择器中你认为最典型的使用例子
+* 基础选择器,例如：#id、*、.class、element
+* 组合选择器，例如：div,p、div p、div>p、div+p、div~p、.class1.class2
+* 属性选择器，例如：input[disabled]、[id=did]、[class~=dclass]
+* 伪类选择器，例如：E:first-child、E:hover
+* 伪元素选择器，例如：E:first-line、E:first-letter
+
+##2..cls1 可以选择 <div class="cls1 cls2"></div>吗？为什么？
+.cls1可以选择这个div，因为这个div有两个class名：cls1和clss2，所以选择的时候任意选择一个class都可以选择到这个div
+
+##3.CSS 优先级从高到底是什么样的？请给出的代码证明
+CSS 优先级从高到低分别是
+* 在属性后面使用 !important 会覆盖页面内任何位置定义的元素样式
+* 作为style属性写在元素标签上的内联样式
+* id选择器
+* 类选择器
+* 伪类选择器
+* 属性选择器
+* 标签选择器
+* 通配符选择器
+* 浏览器自定义
+例如：
+<style>
+  .text {color: red;}
+  p {color: black;}
+  #id1{color:green;}
+</style>
+
+<p class="text" id="id1">Text</p>
+此时没有！important，并且没有内联样式，所以最高优先级为id选择器，所以最后p标签显示为
+
+
+
+##4.CSS 选择器特殊度是如何计算的？以下特殊度各是什么？
+选择器的特殊性分成4个成分等级：a、b、c和d
+* 如果样式是行内样式，那么a = 1
+* b: ID选择器的总数
+* c: 类、伪类和属性选择器的数量
+* d: 元素选择器和伪元素选择器的数量
+    #wrapper #content
+    0-0-2-0
+    #content .datePosted
+    0-1-1-0
+    div#content
+    0-0-1-1
+
+##5.如果计算出的特殊度完全一致，谁的优先级高那？对于以下 HTML 结构
+    <div id="parent">
+        <p id="child" class="class1">
+            Text
+        </p>
+    </div>
+    #parent p.class1 {
+    color: red
+    }
+    div #child.class1 {
+    color: blue
+    }
+###最终 <p> 显示成什么颜色？
+最终会显示为蓝色
+
+###如果是如下 css 那？
+    p {color: yellow}
+    p {color: green}
+最终会显示为绿色
+
+#代码题
+##完成 CSS Diner 中32个练习，提交通过全部题目的截图
+
+
+##完成 hover 下拉，效果如下
+[作业链接]()
