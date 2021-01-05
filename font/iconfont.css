@@ -1,0 +1,29 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1609731363154'); /* IE9 */
+  src: url('iconfont.eot?t=1609731363154#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPAAAsAAAAACPQAAANxAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDFAqFNIRbATYCJAMQCwoABCAFhG0HShvHBxEVnEPIfh4YN81jZT2q5n0xN29YUSPpPQfPU531flUl6YFwmoVvgDrJiuzZATunvck34SorAQLE+o3TE5rvt2nHPGSFiapkydrppz/gH+zwcun6n2OmS/DN8ttsLpFJ0YmRNrC9AVXfNci18B0onsbamJXYcWL+8mUIEE62uqR9x+42Fga+TwCZPGHcCKyGCjORKFgI3oGrBinHg6U2qDNAWfb38prGWaDwaPjR3mM7jKb1M/dZevn/5QYnCNjbGQDtFmigLjAgwwdNA9GFty5NuPM0Q33gxSCoZ6Fn/f/PlsxMBddkX/8fT6FBvHBRJLBNfRqeuREVAs9CVCh4tkmFBtrstoBo4BlIDpNlbpMfjmhdGBkZy+2F04KBYAmBFNdN8suKrTGuZnmijajGVW8ReWxtcnKtmxIM1NaOun49eO1a4MoV++pVf86oM0DHI4ZGFNfA8urwcKdWZIU7Imm5oXm1s2juipRWbrF/WBBBU/RPBLIlIkWe1AKtNphbSEaKSJLQGpCZkAySJYnQjAvSNLa/RxOwD2acmb3Hz6fXOkFnkrPXGXP6+3Lb7+u3Zfln45v9aLMdO3r/vAPOmJjRj8pmW+HfttBvf7ONTeu2O7j4cHn7TL6f7yojR0rXgJ4w4pIqpNFQWbpUwB8qM1Aih7WI9a33tY442Q4ZfrhpZNO7x8h2rNuMX5OG4XJ4AnmXI4341wzxdH5t+fZR7XdEg1y4UJqZDn+VeqdOA+jh6gGA+qKW/C3bGDT+RfWwmOZfrYgnNnMndU9BpjLQfRYKNPa/wSa2GJfL1cbYvIjl4Q0h2LdbRXjF/ieSAeLd20KSRI4HwSJJBoWPLNBYFCINti54iKApeLFoBeHU0el2BAlmohETBhRZw0CItRcU0RwHTayzSIO9Cx6SvQUvsWkIx/Fq98DAvtocBVZRUPanOufBhVo1eeIN5buzUudmhBfE1w5KwrgduGKAbHHCf8pU1ZET7unCXoeuYxqFG+QaVqrjIYrc0DuFOfcT40iApaBAMn+klmMDl0xXpvP7N1B661gyUdGhfQHh1YuTRCgmIK+igVTxKqu9j1JKKSfvcgTrkQsM0AVeRsbhTQ3IqVAl4B4dRFInRxWFx0v6OyzhJlbhb2dSosWIh+DuDWXWigeTSV1WOsD7Zd6xx2QCAAAA') format('woff2'),
+  url('iconfont.woff?t=1609731363154') format('woff'),
+  url('iconfont.ttf?t=1609731363154') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1609731363154#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bluetoothon:before {
+  content: "\e697";
+}
+
+.icon-brightness:before {
+  content: "\e698";
+}
+
+.icon-close:before {
+  content: "\e69e";
+}
+
