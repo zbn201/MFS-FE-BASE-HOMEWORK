@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>码蜂社前端作业17-1</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            
+        }
+        .continer{
+            height: 330px;
+            width: 1500px;
+            text-align: center;
+        }
+        .head,.buttom{
+            height: 100px;
+            background-color: blanchedalmond;
+        }
+        .cont{
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+        }        
+        .left,.right{
+            background-color: cadetblue;
+            width: 300px;
+        }
+        .mid{
+            background-color: cyan;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="continer">
+        <div class="head">
+            头部
+        </div>
+        <div class="cont">
+            <div class="left">
+                侧边栏1固定宽度
+            </div>
+            <div class="mid">
+                主内容栏适应宽度
+            </div>
+            <div class="right">
+                侧边栏2固定宽度
+            </div>
+        </div>
+        
+        <div class="buttom">
+            底部
+        </div>
+    </div>
+</body>
+</html>
