@@ -1,0 +1,243 @@
+
+body{
+    margin: 0;
+}
+.header{
+    height: 330px;
+    background-image: url(https://www.golaravel.com/assets/images/header-bg.jpg);
+}
+.header h1{
+    font-size: 50px;
+    color: #ffffff;
+    margin-bottom: 50px;
+    font-weight: normal;
+}
+.header-div{
+    padding: 50px 0 50px;
+    text-align: center;
+}
+.but-doc{
+    text-decoration: none;
+    font-size: 14px;
+    color: #ffffff;
+    border: solid 1px rgb(240,56,49);
+    padding: 5px 10px;
+}
+.but-doc:hover{
+    background-color: black;
+    border: solid 1px black;
+}
+.nav{
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 30px auto;    
+    border-bottom-color: #e1e1e1;
+}
+.nav .link{
+    margin: 20px 10px;
+    color: rgb(80,80,80);
+    font-size: 14px;
+    text-decoration: none;
+}
+.link:nth-child(3){
+    font-weight: 700;
+}
+.link:hover{
+    color: red;
+}
+.main{
+      background-color: #ebebeb;
+      padding: 40px 0;
+    
+}
+.container{
+    display: flex;
+    max-width: 1170px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.content{
+    display: block;
+    height: 720px;
+    width: 68%;
+    background-color: #ffffff;
+    border-bottom: solid 1px #ebebeb;
+}
+.auther{    
+    text-align: center;
+    line-height: 2em;
+    padding-top: 20px;
+    color: #959595;
+    line-height: 1.75em;
+    
+}
+.main-a{
+    font-weight: 400;
+    color: #303030;
+    font-size: 2em;
+    text-decoration: none;
+    margin-top: 2em;
+    line-height: 1.2em;
+    
+}
+.main-a1{
+    color: #f4645f;
+    text-decoration: none;
+    line-height: 1.75em;
+    font-size: 14px;
+}
+.main-img{
+    border: solid 1px red;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+    
+}
+.content p{
+    font-size: 18px;
+    color: #444443;
+    margin: 0 5% 1.46em;
+}
+.content p a{
+    text-decoration: none;
+    color: #f4645f;
+}
+.content-but{
+    height: 20px;
+    width: 100px;
+    padding: 0 5%;
+}
+.content .but{
+    width: 30px;
+    height: 10px;
+    padding: 10px 10px; 
+    text-decoration: none;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    background: #f4645f;
+    border-radius: 5px;
+}
+.aside{
+    height: 500px;
+    width: 30%;
+    
+    
+}
+.aside .item{
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 20px;
+
+}
+.item .title{
+    margin: 0;
+    font-weight: 500;
+    border-bottom: solid 1px #ebebeb;
+    padding-bottom: 7px;
+    position: relative;
+}
+.item .title:after{
+    display: block;
+    content: " ";
+    border-bottom: solid 1px #f4645f;
+    width: 80px;
+    position: absolute;
+    bottom: -1px;
+}
+.item .a1{
+    text-decoration: none;
+    color: #f4645f;
+}
+.box a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.item .box{
+    margin: 10px auto;
+    text-align: center;
+    width: 90%;
+    height: 30px;
+    line-height: 33px;
+    background-color: #f4645f;
+    color: #ffffff;
+}
+
+.footer{
+    height: 350px;
+    background-color: #202020;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left{
+    width: 25%;
+    height: 80%;    
+    margin: 0 10px;
+}
+.mid{
+    width: 25%;
+    height: 80%;    
+    margin: 0 10px;
+}
+.right{
+    width: 25%;
+    height: 80%;    
+    margin: 0 10px;
+}
+.left .title,.mid .title,.right .title{
+    color: #ffffff;
+    margin: 0;
+    font-weight: 500;
+    border-bottom: solid 1px #ebebeb;
+    padding-bottom: 7px;
+    position: relative;
+    font-size: 1.5em;
+}
+.left .title:after,.mid .title:after,.right .title:after{
+    display: block;
+    content: " ";
+    border-bottom: solid 1px #f4645f;
+    width: 100px;
+    position: absolute;
+    bottom: -1px;
+}
+.cont1{
+    padding: 10px 10px 10px 10px;
+    border-bottom: 1px solid #303030 ;
+}
+.cont1 p{
+    line-height: 0;
+    font-size: 14px;
+    color: #505050;
+}
+.a2{
+    text-decoration: none;
+    color: #959595;
+}
+.cont2 .a2:nth-child(2n+1){
+    width: 44%;
+    float: left;
+    margin: 5px 10px 5px 10px;
+    
+}
+.cont2 .a2:nth-child(2n){
+    width: 44%;
+    float: right;
+    margin: 5px 10px 5px 10px;
+}
+.cont2{
+    height: 130px;
+    padding: 10px 10px 10px 10px;
+    border-bottom: 1px solid #303030 ;
+}
+.leshi{
+    width: 44%;
+    float: left;
+    margin: 5px 10px 5px 20px;
+}
