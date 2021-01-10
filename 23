@@ -1,0 +1,19 @@
+#问答题
+##1.如何在 HTML 文档中嵌入 JavaScript 脚本？
+* 可以在body标签内添加script标签，然后在script标签内写入JavaScript脚本
+* 可以在head标签内添加script标签，然后在script标签内写入JavaScript脚本
+* 可以在scirpt标签内添加src属性，指向js文件
+
+##2.JavaScript 需要预先编译吗？它是如何执行的？
+JavaScript不需要预编译，它是实时解释的，即代码执行到哪个位置，就解释到哪个位置
+
+##3.如何使用 JavaScript 在网页加载完毕时弹窗？
+可以调用alert函数实现弹窗，但要在网页加载完毕后弹窗，就需要把这段JavaScript脚本放置在body的最后的位置
+
+#代码题
+##1.请实现在文档流中动态输出如下 HTML
+    <ul>
+    <li>码蜂社</li>
+    <li>前端</li>
+    <li>教程</li>
+    </ul>
