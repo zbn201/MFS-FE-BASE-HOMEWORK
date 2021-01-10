@@ -1,0 +1,93 @@
+#问答题
+##1.JavaScript 中有哪些基本类型？
+* 数值（number）
+* 字符串（string）
+* 布尔值（boolean）
+* 对象（object）
+* undefined
+* null
+
+##2.如何声明并初始化字符串类型的变量？" 和 ' 声明字符串有什么不同的应用场景？
+字符串是存储字符的变量。 字符串可以是引号中的任意文本。例如：
+    var carname="Bill Gates";
+当要声明的字符串内包含有"时，就需要使用'进行避免
+当要声明的字符串内包含有'时，就需要使用"进行避免
+
+##3.JavaScript 数值类型的变量支持科学计数法表示吗？如果能，如何表示？
+JavaScript数值类型的变量支持科学计数法，例如：
+    var y=123e5;    表示的是12300000
+    var y=123e-5;   表示的是0.00123
+
+##4.Infinity 是什么类型？什么时候会得到 Infinity？
+infinity是number类型，只有在声明的数字值大于5e-324或小于1.7976931348623157e+308时才会用到infinity
+
+##5.NaN 是什么类型？它表示什么意思？
+NaN含义是Not a Number，表示非数字，NaN和任何值都不相等，包括自己
+
+##6.JavaScript 中布尔（boolean）类型的变量有哪两个合法值？分别代表什么意思？
+布尔（逻辑）只能有两个值：true 或 false，分别代表真和假
+
+##7.JavaScript 中如何声明对象（狭义的对象）？
+对象由花括号分隔。在括号内部，对象的属性以名称和值对的形式 (name : value) 来定义。属性由逗号分隔，例如：
+    var person={firstname:"Bill", lastname:"Gates", id:5566};
+
+##8.原始类型可以看做是广义的对象吗？可以调用 toString() 方法吗？
+JavaScript的所有数据，都可以视为广义的对象。不仅数组和函数属于对象，就连原始类型的数据（数值、字符串、布尔值）也可以用对象方式调用。可以调用toString（）方法
+
+##9.新建数组有几种方法？最常用的是哪种方法？
+有三种向数组赋值的方法
+* 使用 new Array() 新建数组
+* 使用 new Array(" a "," b ")
+* 使用 var mycars=["Saab","Volvo","BMW"]
+最常用的是第三种方法
+
+##10.任何数据类型如何转化为字符串？
+我们可以使用 toString() 方法将其他数据类型转换为字符串
+
+##11.最常用的最简单的将任意类型转化为 Number 的方法是什么？
+可以使用一个+，使用加法将任意类型转换为number
+
+##12.typeof 可以查看哪些类型变量的类型，可以区分 Array ，Function 和 Object 类型吗？如果不能，我们该使用什么办法区分？
+typeof可以查看数值、字符串、布尔值、函数、undefined、其他情况
+不可以区分，使用instanceof运算符可以做到。
+
+##13.null 和 undefined 有什么区别？
+null与undefined都可以表示“没有”，含义非常相似
+null表示空值，即该处的值现在为空。典型用法是：
+    作为函数的参数，表示该函数的参数是一个没有任何内容的对象。
+    作为对象原型链的终点。
+undefined表示不存在值，就是此处目前不存在任何值。典型用法是：
+    变量被声明了，但没有赋值时，就等于undefined。
+    调用函数时，应该提供的参数没有提供，该参数等于undefined。
+    对象没有赋值的属性，该属性的值为undefined。
+    函数没有返回值时，默认返回undefined。
+
+#代码题
+##1.请将下面变量转化为 Number，并回答其对应的 Number 值是多少
+    "1.0"       parseInt("1.0")             number值为1
+    "2"          parseInt("2")              number值为2
+    "str"        parseInt("str")            number值为NaN
+    true         parseInt(true)             number值为NaN
+    []           parseInt([])               number值为NaN
+    [1, 2, 3]    parseInt([1,2,3])          number值为1
+    {}           parseInt({})               number值为NaN
+    {a:1}        parseInt({a:1})              number值为NaN
+    function(){}     parseInt(function(){})     number值为NaN
+
+##2.请将下面变量转化为 Boolean，并回答其对应的 Number 值是什么
+    "1"             var t="1";var a=!!t;                    Boolean值为true
+    "str"           var t="str";var a=!!t;                  Boolean值为true
+    1               var t=1;var a=!!t;                      Boolean值为true
+    0               var t=0;var a=!!t;                      Boolean值为false
+    []              var t=[];var a=!!t;                     Boolean值为true
+    [1, 2, 3]       var t=[1,2,3];var a=!!t;                Boolean值为true
+    {}              var t={};var a=!!t;                     Boolean值为true
+    {a:1}           var t={a:1};var a=!!t;                  Boolean值为true
+    function(){}    var t=function(){};var a=!!t;           Boolean值为true
+
+##3.请初始化一个变量 obj，它拥有以下几个字段
+    字段	值
+    a	1
+    b	“2”
+    c	true
+[作业链接]()
