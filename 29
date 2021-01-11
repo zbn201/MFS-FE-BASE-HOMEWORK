@@ -1,0 +1,44 @@
+#问答题
+##1.创建对象有几种方式？最常用的是那种？
+* 直接创建，例如：
+    person=new Object(); // 或者使用 {}
+    person.firstname="Bill";
+    person.lastname="Gates";
+    person.age=56;
+    person.eyecolor="blue";
+* 字面量创建，例如：
+    person={firstname:"John",lastname:"Doe",age:50,eyecolor:"blue"};
+* 对象构造器，例如：
+    function Person(firstname,lastname,age,eyecolor){
+    this.firstname=firstname;
+    this.lastname=lastname;
+    this.age=age;
+    this.eyecolor=eyecolor;
+    }
+    var myFather=new Person("Bill","Gates",56,"blue");
+其中最常用的是字面量创建方法
+
+##2.如何使用对象构造器？对象构造器和函数有什么关系？
+使用对象构造器首先要写好对象构造器，例如：
+    function Person(firstname,lastname,age,eyecolor){
+        this.firstname=firstname;
+        this.lastname=lastname;
+        this.age=age;
+        this.eyecolor=eyecolor;
+    }
+然后需要使用new来创建对象，例如：
+    var myFather=new Person("Bill","Gates",56,"blue");
+对象构造器和函数很相似，但是对象构造器需要用到new，而函数不需要
+
+##3.如何遍历所有的对象属性？
+可以使用for   in来进行遍历，例如：
+    var person={fname:"Bill",lname:"Gates",age:56};
+
+    for (x in person){
+    console.log(x, person[x])
+    }
+
+#代码题
+##1.对于以下对象，请实现输出对象中所有字段名称和其对应的值
+    var person={fname:"Bill",lname:"Gates",age:56};
+[作业链接]()
