@@ -1,0 +1,17 @@
+#问答题
+##1.什么是 Canvas？Canvas 能干那些事？
+Canvas API 提供了一个通过JavaScript 和 HTML的<canvas>元素来绘制图形的方式。它可以用于动画、游戏画面、数据可视化、图片编辑以及实时视频处理等方面。
+
+##2.画笔颜色，填充颜色各如何设置？
+fillStyle = color设置图形的填充颜色。
+strokeStyle = color设置图形轮廓的颜色
+
+##3.Canvas 中如何画圆？如何填充圆？
+void ctx.arc(x, y, radius, startAngle, endAngle [, anticlockwise]);
+使用arc函数来画圆
+
+##4.Canvas 如何改变坐标系的位置和单位长度？
+
+
+#代码题
+##1.请使用 Canvas 绘制钟表，并可以动态显示当前时间

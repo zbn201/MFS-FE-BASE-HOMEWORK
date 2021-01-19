@@ -1,0 +1,59 @@
+#问答题
+##1.dom 元素常用属性有哪些？
+* nodeName：元素标签名，还有个类似的tagName
+* nodeType：元素类型
+* className：类名
+* id：元素id
+* children：子元素列表（HTMLCollection）
+* childNodes：子元素列表（NodeList）
+* firstChild：第一个子元素
+* lastChild：最后一个子元素
+* nextSibling：下一个兄弟元素
+* previousSibling：上一个兄弟元素
+* parentNode、parentElement：父元素
+
+##2.如何查找元素？
+* getElementById方法返回匹配指定ID属性的元素节点。如果没有发现匹配的节点，则返回null。
+* getElementsByClassName方法返回一个类似数组的对象（HTMLCollection类型的对象），包括了所有class名字符合指定条件的元素（搜索范围包括本身），元素的变化实时反映在返回结果中
+* getElementsByTagName方法返回所有指定标签的元素（搜索范围包括本身）。
+* getElementsByName方法用于选择拥有name属性的HTML元素
+* querySelector方法返回匹配指定的CSS选择器的元素节点
+* querySelectorAll方法返回匹配指定的CSS选择器的所有节点
+* elementFromPoint方法返回位于页面指定位置的元素
+
+##3.如何增/删/改/查元素？
+###增
+* createElement方法用来生成HTML元素节点。
+* createTextNode方法用来生成文本节点。
+* createDocumentFragment方法生成一个DocumentFragment对象。
+###删
+* removeChild()删除元素
+###改
+* appendChild()：在元素末尾添加元素
+* insertBefore()：在某个元素之前插入元素
+* replaceChild()接受两个参数：要插入的元素和要替换的元素
+###查
+* getElementById方法返回匹配指定ID属性的元素节点。如果没有发现匹配的节点，则返回null。
+* getElementsByClassName方法返回一个类似数组的对象（HTMLCollection类型的对象），包括了所有class名字符合指定条件的元素（搜索范围包括本身），元素的变化实时反映在返回结果中
+* getElementsByTagName方法返回所有指定标签的元素（搜索范围包括本身）。
+* getElementsByName方法用于选择拥有name属性的HTML元素
+* querySelector方法返回匹配指定的CSS选择器的元素节点
+* querySelectorAll方法返回匹配指定的CSS选择器的所有节点
+* elementFromPoint方法返回位于页面指定位置的元素
+
+##4.HTMLCollectioin 和 NodeList 有何异同？
+NodeList 对象代表一个有顺序的节点列表，HTMLCollection 是一个接口，表示 HTML 元素的集合，它提供了可以遍历列表的方法和属性
+HTMLCollection与NodeList有很大部分相似性
+* 都是类数组对象，都有length属性，可以通过for循环迭代
+* 都是只读的
+* 都是实时的，即文档的更改会立即反映到相关对象上面(有一个例外，document.querySelectorAll返回的NodeList不是实时的)
+* 都有item()方法，可以通过item(index)或item("id")获取元素
+不同点在于
+* HTMLCollection对象具有namedItem()方法，可以传递id或name获得元素
+* HTMLCollection的item()方法和通过属性获取元素(document.forms.f1)可以支持id和name，而NodeList对象只支持id
+
+#代码题
+##1.请使用 Dom 操作向<ul id="list"></ul> 中插入如下 dom
+    <li>1</li>
+    <li>2</li>
+[作业链接]()

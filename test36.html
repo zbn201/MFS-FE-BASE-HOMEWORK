@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>码蜂社前端作业36</title>
+
+</head>
+
+<body>
+    <canvas id="ch1" width="1000px" height="600px"></canvas>
+    <script>
+        var oC = document.getElementById('ch1');
+        var oGC = oC.getContext("2d");
+
+        function drawClock() {
+            var x = 600;   //指定坐标   
+            var y = 300;
+            var r = 150;  //指定钟表半径   
+
+            oGC.clearRect(0, 0, oC.width, oC.height);//清空画布   
+
+            var oDate = new Date();      //创建日期对象   
+            var oHours = oDate.getHours();//获取时间   
+            var oMin = oDate.getMinutes();
+            var oSen = oDate.getSeconds();
+            var oWeekday = oDate.getDay();
+
+
+            oGC.fillStyle = "#000000";//画钟表数字　
+            oGC.font = "normal 60px 微软雅黑";//设置字体　　
+            oGC.textBaseline = "middle";//竖直对齐　　
+            oGC.textAlign = "center";//水平对齐　
+            oGC.fillText(oHours, 500, 50, 100);//绘制小时   
+            oGC.fillText(oMin, 600, 50, 100);//绘制分钟
+            oGC.fillText(oSen, 700, 50, 100);//绘制秒
+            oGC.fillText(":", 550, 45, 100);//绘制：
+            oGC.fillText(":", 650, 45, 100);//绘制：
+            oGC.font = "normal 40px 微软雅黑";//设置字体　
+            if (oWeekday == 0) {
+                oGC.fillText("星期天", 597, 110, 100);//绘制星期天
+            }
+            else if (oWeekday == 1) {
+                oGC.fillText("星期一", 597, 110, 100);//绘制星期一
+            }
+            else if (oWeekday == 2) {
+                oGC.fillText("星期二", 597, 110, 100);//绘制星期二
+            }
+            else if (oWeekday == 3) {
+                oGC.fillText("星期三", 597, 110, 100);//绘制星期三
+            }
+            else if (oWeekday == 4) {
+                oGC.fillText("星期四", 597, 110, 100);//绘制星期四
+            }
+            else if (oWeekday == 5) {
+                oGC.fillText("星期五", 597, 110, 100);//绘制星期五
+            }
+            else {
+                oGC.fillText("星期六", 597, 110, 100);//绘制星期六
+            }
+
+            var oHoursValue = (-90 + oHours * 30 + oMin / 2) * Math.PI / 180; //设置时针的值   
+            var oMinValue = (-90 + oMin * 6) * Math.PI / 180;
+            var oSenValue = (-90 + oSen * 6) * Math.PI / 180;
+
+            oGC.beginPath();//开始   
+
+            for (var i = 0; i < 60; i++) {         //i为60，代表着时钟的60个小刻度   
+                oGC.moveTo(x, y);
+                oGC.arc(x, y, r, 6 * i * Math.PI / 180, 6 * (i + 1) * Math.PI / 180, false); //循环从6度到12度   
+            }
+            oGC.closePath();
+            oGC.stroke();
+
+            oGC.fillStyle = 'white'; //覆盖住小刻度的黑色线   
+            oGC.beginPath();
+            oGC.moveTo(x, y);
+            oGC.arc(x, y, r * 19 / 20, 0, 360 * (i + 1) * Math.PI / 180, false);
+
+            oGC.closePath();//结束   
+            oGC.fill();
+
+            oGC.lineWidth = 3; //设置时钟圆盘大刻度的粗细值   
+            oGC.beginPath();  //开始画大的时钟刻度   
+
+            for (i = 0; i < 12; i++) {              //i为12，代表着时钟刻度的12大格   
+                oGC.moveTo(x, y);
+                oGC.arc(x, y, r, 30 * i * Math.PI / 180, 30 * (i + 1) * Math.PI / 180, false); // 间隔为30度，弧度=角度*Math.PI/180  
+
+            }
+
+
+
+            oGC.closePath();
+            oGC.stroke();
+
+            oGC.fillStyle = 'white'; //覆盖住大刻度的黑色线   
+            oGC.beginPath();
+            oGC.moveTo(x, y);
+            oGC.arc(x, y, r * 18 / 20, 360 * (i + 1) * Math.PI / 180, false);
+
+
+            oGC.closePath();
+            oGC.fill();//表盘完成  
+
+            oGC.fillStyle = "#FF0000";//画钟表数字　
+            oGC.font = "normal 40px 微软雅黑";//设置字体　　
+            oGC.textBaseline = "middle";//竖直对齐　　
+            oGC.textAlign = "center";//水平对齐　
+            oGC.fillText("3", 725, 300, 15);//绘制3   
+            oGC.fillText("6", 600, 415, 15);//绘制6   
+            oGC.fillText("9", 475, 300, 15);//绘制9   
+            oGC.fillText("12", 600, 185, 20);//绘制12   
+
+            oGC.fillStyle = "#000000";//画钟表数字　
+            oGC.font = "normal 25px 微软雅黑";//设置字体　　
+            oGC.textBaseline = "middle";//竖直对齐　　
+            oGC.textAlign = "center";//水平对齐　
+            oGC.fillText("1", 660, 200, 15);//绘制1   
+            oGC.fillText("2", 700, 235, 15);//绘制2   
+            oGC.fillText("4", 700, 365, 15);//绘制4   
+            oGC.fillText("5", 665, 400, 15);//绘制5 
+            oGC.fillText("11", 540, 200, 20);//绘制11   
+            oGC.fillText("10", 500, 240, 20);//绘制10   
+            oGC.fillText("8", 495, 360, 15);//绘制8   
+            oGC.fillText("7", 540, 400, 15);//绘制7 
+
+
+            oGC.lineWidth = 5;//设置时针宽度   
+            oGC.beginPath();//开始绘制时针   
+            oGC.moveTo(x, y);
+
+            oGC.arc(x, y, r * 10 / 20, oHoursValue, oHoursValue, false);//设置时针大小和弧度   
+            oGC.closePath();
+            oGC.stroke();
+
+            oGC.lineWidth = 3;//设置分针宽度   
+            oGC.beginPath();//开始绘制分针   
+            oGC.moveTo(x, y);
+
+            oGC.arc(x, y, r * 14 / 20, oMinValue, oMinValue, false);//设置分针大小和弧度   
+            oGC.closePath();
+            oGC.stroke();
+
+            oGC.lineWidth = 1;//设置秒针宽度   
+            oGC.beginPath();//开始绘制秒针   
+            oGC.moveTo(x, y);
+
+            oGC.arc(x, y, r * 19 / 20, oSenValue, oSenValue, false);//设置秒针大小和弧度   
+            oGC.closePath();
+            oGC.stroke();
+            //playSound();
+
+        }
+        setInterval(drawClock, 1000);//设置定时器，让时钟运转起来   
+        drawClock(); 
+    </script>
+</body>
+
+</html>
