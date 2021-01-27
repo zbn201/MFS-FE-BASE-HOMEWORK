@@ -12,6 +12,5 @@ void ctx.arc(x, y, radius, startAngle, endAngle [, anticlockwise]);
 
 ##4.Canvas 如何改变坐标系的位置和单位长度？
 
-
 #代码题
 ##1.请使用 Canvas 绘制钟表，并可以动态显示当前时间
