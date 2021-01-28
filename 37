@@ -9,14 +9,16 @@
 * 使用 addEventListener() 指定事件响应函数
 
 ##3.document.getElementById("eleID").onclick = onclickHandle 和 addEventListener() 绑定事件处理函数有何异同？不同之处请至少说出3点。
-
+我们通常使用 addEventListener 给元素添加属性从而避免同时响应不同的代码
+使用on绑定的事件会覆盖，而addEventListener则可以为一个元素绑定多个事件，且保证全都会被执行
+addEventListener可以控制是在事件捕获阶段或者是在冒泡阶段调用事件处理程序，而on绑定的事件不可以
 
 ##4.什么是事件对象？我们如何获取事件对象？
 有的时候我们还需要获得当前事件的具体信息，这时候我们可以获取事件对象。
 
 #代码题
 ##1.请实现标签页效果，样式部分可以自行发挥
-
+[作业链接]()
 
 ##2.请实现抽奖效果，实现开始抽奖后，.award不断变化，点击停止后提示用户中奖等级
 备选奖项和概率如下
@@ -33,3 +35,5 @@
    <button id="start">开 始</button>
    <button id="stop">停 止</button>
 </div>
+
+[作业链接]()

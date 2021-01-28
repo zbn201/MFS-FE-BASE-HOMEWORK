@@ -1,0 +1,26 @@
+#问答题
+##1.BOM 是什么？提供的 API 让我们能操作什么？
+BOM是Browser Object Model的缩写，简称浏览器对象模型
+BOM提供了独立于内容而与浏览器窗口进行交互的对象
+
+##2.window.name 有怎样的特性
+window.name属性用于设置当前浏览器窗口的名字，浏览器刷新后，该属性保持不变。
+
+##3.如何获取窗口的尺寸？
+我们可以通过 window 对象获取浏览器窗口的尺寸：
+    window.innerHeight - 浏览器窗口的内部高度
+    window.innerWidth - 浏览器窗口的内部宽度
+
+##4.如何调整滚动条位置
+我们也可以通过 window 获得滚动条的位置：
+    window.scrollX：滚动条横向偏移
+    window.scrollY：滚动条纵向偏移
+
+##5.如何获取浏览器相关信息
+Window对象的navigator属性，指向一个包含浏览器相关信息的对象
+
+##6.如何得到一个元素计算后的属性值
+JS---获取元素计算后的样式属性值 (getComputedStyle)---兼容函数
+
+##7.如何模拟点击前进后退按钮的点击？
+window.history 对象包含浏览器的历史。

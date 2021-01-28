@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>码蜂社前端作业38-1</title>
+</head>
+<body>
+    <form id="signin" action="#" target="_blank" onsubmit="return onSignupSubmit()">
+        <p id="sigin-error" style="color:red"></p>
+        <p>
+            用户名: <input type="text" id="username" name="username">
+        </p>
+        <p>
+            口令: <input type="password" id="password" name="password">
+        </p>
+        <p>
+            重复口令: <input type="password" id="password-2">
+        </p>
+        <p>
+            <button type="submit">提交</button> <button type="reset">重置</button>
+        </p>
+    </form>
+    <script>
+        function onSignupSubmit(){
+            var oUsername=document.getElementById("username");
+            var oPassword=document.getElementById("password");
+            var oPassword_2=document.getElementById("password-2");
+            console.log(oUsername.value,oPassword.value,oPassword_2.value);
+            if(oUsername.value.length>10 ||oUsername.value.length<3)
+            {
+                alert("请输入正确的用户名");
+                return false;
+            }
+                
+            if(oPassword.value.length>20||oPassword.value.length<6)
+            {
+                alert("请输入正确的密码");
+                return false;
+            }    
+            if(oPassword.value!=oPassword_2.value)
+            {
+                alert("两次密码不一致");
+                return false;
+            }               
+            
+            return true;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>码蜂社前端作业37-2</title>
+</head>
+
+<body>
+    <div id="award">点击“开始“按钮，开始抽奖！</div>
+    <div class="action">
+       
+        <button id="start" onclick="start()">开 始</button>
+        <button id="stop" onclick="stop()">停 止</button>
+
+    </div>
+    <script>
+        var isStart = false;
+        function start() {
+            isStart = true;
+        }
+        function stop() {
+            var a = [0.01, 0.1, 0.3, 0.4, 0.19];
+            var b = ["特等奖", "一等奖", "二等奖", "三等奖", "鼓励奖"];
+            var random = Math.random();
+            console.log("random" + " " + random);
+            for (var i = 1; i < a.length; i++) {
+                a[i] = a[i] + a[i - 1];
+            }
+
+            for (var i = 0; i < a.length; i++) {
+                if (a[i] > random && isStart) {
+                    console.log(i);
+                    alert(random+"恭喜您获得" + b[i]);
+                    isStart=false;
+                   
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>
