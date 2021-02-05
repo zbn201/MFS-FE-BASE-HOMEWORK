@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>码蜂社前端作业41</title>
+</head>
+<body>
+    我们自己的网页
+    <iframe src="http://www.a.com:5000/test36.html" frameborder="0" width="500px" height="500px"></iframe>
+    <script>
+        document.domain="a.com";
+        setTimeout(() => {
+            console.log(window.frames[0].document.getElementById("ch1"))
+        }, 1000);
+        
+    </script>
+</body>
+</html>

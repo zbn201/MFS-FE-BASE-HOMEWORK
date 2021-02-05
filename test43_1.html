@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>码蜂社前端作业43-1</title>
+</head>
+<body>
+    <canvas id="ch1" width="1000px" height="600px"></canvas>
+    <script>
+        var oC = document.getElementById('ch1');
+        var oGC = oC.getContext("2d")
+        
+        var myDate=  new Date();
+        myDate.setFullYear(2017);
+        myDate.setMonth(3);
+        myDate.setDate(5);
+        myDate.setHours(10,3,8);
+        var oHours = myDate.getHours();//获取时间   
+            var oMin = myDate.getMinutes();
+            var oSen = myDate.getSeconds();
+            var oWeekday = myDate.getDay();
+
+
+            oGC.fillStyle = "#000000";//画钟表数字　
+            oGC.font = "normal 60px 微软雅黑";//设置字体　　
+            oGC.textBaseline = "middle";//竖直对齐　　
+            oGC.textAlign = "center";//水平对齐　
+            oGC.fillText(oHours, 500, 50, 100);//绘制小时   
+            oGC.fillText(oMin, 600, 50, 100);//绘制分钟
+            oGC.fillText(oSen, 700, 50, 100);//绘制秒
+            oGC.fillText(":", 550, 45, 100);//绘制：
+            oGC.fillText(":", 650, 45, 100);//绘制：
+    </script>
+</body>
+</html>

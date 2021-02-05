@@ -10,15 +10,30 @@
     http://mafengshe.com/a/b/c.html
     file:///a/b.html
 是什么原因造成直接跨域访问失败？
+    http://bbs.mafengshe.com/a/b/c.html     访问成功   
+    http://bbs.mafengshe.com/a.html         访问成功
+    http://bbs.mafengshe.com/pic.png        访问成功
+    https://bbs.mafengshe.com/a/b.html      协议名不同
+    http://bbs.mafengshe.com:81/a/b.html    端口号不同
+    http://work.mafengshe.com/a/b.html      域名不同
+    http://mafengshe.com/a/b/c.html         域名不同
+    file:///a/b.html                        协议名不同
 
 ##2.跨域有哪几种方法？他们的原理各是什么？各有什么局限性？（如果有的话）
 需要回答四种跨域方法
+* 使用document.domain更改源：我们可以通过document.domain设置当前域的值为自身或者是当前域的父级，设置成父域后，较短的域将用于后续的检查。
+* 使用document.name 存储信息：window.name是持久存在一个窗口载入过的所有页面中的，所以我们可以通过window.name在不同iframe间传递信息，name可以存储2MB的信息
+* 通过JSONP实现跨域：利用 <script> 元素的这个开放策略，网页可以得到从其他来源动态产生的 JSON 资料，而这种使用模式就是所谓的 JSONP。
+* CORS实现跨域：允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。
 
 ##3.本地如何模拟跨域访问？
 请演示并截图
+可以通过修改host文件，添加主机名。之后就可以模拟跨域访问
+
 
 #代码题
 ##1.请使用 降域 实现 iframe 跨域
-
+[作业链接]()
 
 ##2.请实现 JSONP 跨域，后端可采用静态服务器
+[作业链接]()
